@@ -3,8 +3,8 @@ import {useState} from 'react'
 import Image from 'next/image'
 import { CarProps } from '@/types';
 import CustomButton from './CustomButton';
-import { calculateCarRent } from '@/utils';
-import CarDetails from './CarDetails';
+import { calculateCarRent, generateCarImageUrl } from '@/utils';
+import {CarDetails} from './CarDetails';
 
 interface CarCardProps {
     car: CarProps;
@@ -34,7 +34,7 @@ const CarCard = ({car}: CarCardProps) => {
         </p>
 
         <div className='relative w-full h-40 my-3 object-contain'>
-          <Image src="/mustang_69.jpeg" alt="car model" fill priority className='object-contain'/>
+          <Image src={generateCarImageUrl(car)} alt="car model" fill priority className='object-contain'/>
         </div>
 
         <div className='relative flex w-full mt-2'>
