@@ -1,7 +1,7 @@
 import Hero from '@/components/Hero'
 import SearchBar from '@/components/SearchBar'
 import CustomFilter from '@/components/CustomFilter'
-import { fetchCars } from '@/utils'
+import { fetchCars, generateCarImageUrl } from '@/utils'
 import CarCard from '@/components/CarCard';
 
 
