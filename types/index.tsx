@@ -1,6 +1,5 @@
 import { MouseEventHandler } from "react";
 
-
 export interface CustomButtonProps {
     title: string;
     containerStyles?: string;
@@ -10,12 +9,10 @@ export interface CustomButtonProps {
     rightIcon?: string;
     isDisabled?: boolean;
 }
-
 export interface SearchManufacturerProps {
    manufacturer: string,
    setManufacturer:(manufacturer: string) => void; 
 }
-
 export interface CarProps{
     city_mpg: number;
     class: string;
@@ -29,4 +26,31 @@ export interface CarProps{
     model: string;
     transmission: string;
     year: number;
+}
+export interface FilterProps{
+    manufacturer: string;
+    year: number;
+    fuel: string;
+    limit: number;
+    model: string;
+}
+export interface OptionProps{
+    title: string;
+    value: string;
+}
+export interface CustomFilterProps{
+    title: string;
+    options: OptionProps[];
+}
+export interface ShowMoreCars{
+    pageNumber: number;
+    isNext: boolean;
+    setLimit: number;
+}
+export interface HomeProps{
+    searchParams: FilterProps;
+}
+export interface SearchManuFacturerProps {
+    manufacturer: string;
+    setManuFacturer: (manufacturer: string) => void;
 }
